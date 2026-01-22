@@ -44,13 +44,14 @@ export const Equation: React.FC<EquationProps> = ({
     const processedLatex = useMemo(() => {
         let result = latex;
 
-        // Replace \clr{termName}{content} with \htmlClass{term-termName}{\textcolor{color}{content}}
+        // Replace \clr{termName}{content} with \htmlClass{term-termName}{\color{color} content}
         const clrPattern = /\\clr\{([^}]+)\}\{([^}]+)\}/g;
 
         result = result.replace(clrPattern, (_, termName, content) => {
             const color = colorMap[termName];
             if (color) {
-                return `\\htmlClass{term-${termName}}{\\textcolor{${color}}{${content}}}`;
+                // Use \htmlStyle for inline color styling which is more reliable
+                return `\\htmlClass{term-${termName}}{\\htmlStyle{color: ${color}}{${content}}}`;
             }
             return content;
         });
