@@ -51,9 +51,9 @@ export const UnitCircleVisualization: React.FC<UnitCircleVisualizationProps> = (
         <div className="w-full">
             <div className="rounded-xl overflow-hidden border border-border bg-white">
                 <Mafs
-                    height={350}
-                    viewBox={{ x: [-1.8, 1.8], y: [-1.5, 1.5] }}
-                    preserveAspectRatio={false}
+                    height={400}
+                    viewBox={{ x: [-1.8, 1.8], y: [-1.8, 1.8] }}
+                    preserveAspectRatio="contain"
                 >
                     <Coordinates.Cartesian
                         xAxis={{ lines: 0.5 }}
