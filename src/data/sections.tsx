@@ -152,8 +152,8 @@ const UnitCircleLesson = () => {
 
             {/* Equations */}
             <Section id="equations">
-                <MathBlock equation="\sin(\text{phase}) = \frac{\color{green}\text{opposite}}{\color{blue}\text{hypotenuse}}" />
-                <MathBlock equation="\cos(\text{phase}) = \frac{\color{red}\text{adjacent}}{\color{blue}\text{hypotenuse}}" />
+                <MathBlock equation="\sin(\text{phase}) = \frac{\textcolor{green}{\text{opposite}}}{\textcolor{blue}{\text{hypotenuse}}}" />
+                <MathBlock equation="\cos(\text{phase}) = \frac{\textcolor{red}{\text{adjacent}}}{\textcolor{blue}{\text{hypotenuse}}}" />
             </Section>
 
             {/* Hypotenuse = 1 explanation */}
